@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+# Child theme Wordpress - La Compagnie de l'artois
 
-You can use the [editor on GitHub](https://github.com/JujuOneLove/la-compagnie-de-lartois/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Getting start
 ```
+npm install
+npm run start
+```
+CODE !
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Add JS file
+1) Ajouter votre fichier JS dans l'une des catégories suivante :
+- src/js/<b>components</b>/ (btn, navbar, carrousel...)
+- src/js/<b>lib</b>/ (librairie ajouté)
+- src/js/<b>pages</b>/ (JS uniquement sur les pages)
+- src/js/<b>commun.js</b> (Pour toute les pages)
 
-### Jekyll Themes
+2) Import ton fichier JS dans le bon fichier main
+3) Si tu ajoute une page, Import ton js page dans app.js
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JujuOneLove/la-compagnie-de-lartois/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Add SCSS file
+1) Ajoute ton fichier SCSS
+2) Import ton fichier SCSS dans main.scss
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# Technos :
+- HTML
+- CSS
+  - Normalize.css 7.0.0
+- SCSS
+- ES6
+  - Jquery 3.2.1
+- PHP
+- WordPress
+- Webpack
+  - [both] Babel (ES6)
+  - [dev]  Brower sync (livereload)
+  - [dev]  Clean (supprime le dossier ./dist)
+  - [dev]  Sourcemap (chemin des fichiers d'origines
+  - SCSS
+    - [both] Extract text
+  - Postcss
+    - [both] Autoprefixer (rajoute les prefix pour la compatiblité navigateur (voir browserslist dans package.json) )
+    - [both] css-mqpacker (concat les medias query) 
+  - Purify
+    - [prod] Purify (remove les class useless)
+    - [prod] Uglify (minifie)

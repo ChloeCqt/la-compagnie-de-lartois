@@ -13,3 +13,27 @@ endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
 // END ENQUEUE PARENT ACTION
+
+//On ajoute le style du bundle dans le theme enfant
+add_filter('stylesheet_uri', 'gkp_stylesheet_uri', 10, 2);
+function gkp_stylesheet_uri($stylesheet_uri, $stylesheet_dir_uri) {
+    // On change le nom du fichier
+    return $stylesheet_dir_uri.'/dist/bundle';
+}
+
+//On ajoute nos Scripts
+add_action('init', 'gkp_insert_js_in_footer');
+function gkp_insert_js_in_footer() {
+
+    // On annule jQuery installer par WordPress (version 1.4.4
+    //wp_deregister_script( 'jquery' );
+
+    // On declare un nouveau jQuery si le jQuerry du WordPress est obsolète
+    //wp_enqueue_script( 'jquery', get_stylesheet_directory_uri().'/node_modules/jquery/dist/jquery.min.js','',false,true );
+
+    // On insere le fichier de ses propres fonctions javascript
+    wp_register_script('functions', get_stylesheet_directory_uri().'/dist/bundle.js','',false,true);
+    wp_enqueue_script('functions');
+
+}
+?>
