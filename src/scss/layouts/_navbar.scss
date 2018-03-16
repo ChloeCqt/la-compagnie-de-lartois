@@ -1,3 +1,44 @@
-.main-nav {
-  // code footer
+.navigation-bar{
+  &.coloured-nav{
+    &.homepage{
+      img{
+        &.logo{
+          &.dark{
+            vertical-align: middle;
+            max-height: 70px;
+            width: auto;
+          }
+        }
+        &.custom-logo {
+        vertical-align: middle;
+        max-height: 70px;
+        width: auto;
+        }
+      }
+    }
+  }
+  .main-menu{
+    .menu-item{
+      background: url(#{$pathIMG}/icons/trait.png) no-repeat 0% 50%;
+      background-size: 6px;
+      &.current-menu-item{
+        color: $red!important;
+        a{
+          color: $red!important;
+        }
+      }
+      &:hover{
+        color: $red!important;
+        a{
+          color: $red!important;
+        }
+      }
+      &:active{
+        color: $red!important;
+        a{
+          color: $red!important;
+        }
+      }
+    }
+  }
 }

@@ -9,7 +9,12 @@ body {
 }
 
 a {
-  color           : $secondary;
+  &:hover{
+    color : $red!important;
+  }
+  &:active{
+    color: $red!important;
+  }
   text-decoration : none;
 }
 
