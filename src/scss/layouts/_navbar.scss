@@ -23,20 +23,25 @@
       background-size: 6px;
       &.current-menu-item{
         color: $red!important;
-        a{
+        >a{
           color: $red!important;
         }
       }
       &:hover{
         color: $red!important;
-        a{
+        >a{
           color: $red!important;
         }
       }
       &:active{
         color: $red!important;
-        a{
+        >a{
           color: $red!important;
+        }
+      }
+      .sub-menu{
+        .menu-item{
+          background: none;
         }
       }
     }
