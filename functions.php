@@ -18,7 +18,7 @@ add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 add_filter('stylesheet_uri', 'gkp_stylesheet_uri', 10, 2);
 function gkp_stylesheet_uri($stylesheet_uri, $stylesheet_dir_uri) {
     // On change le nom du fichier
-    return $stylesheet_dir_uri.'/dist/bundle';
+    return $stylesheet_dir_uri.'/dist/bundle.css';
 }
 
 //On ajoute nos Scripts
@@ -36,4 +36,5 @@ function gkp_insert_js_in_footer() {
     wp_enqueue_script('functions');
 
 }
+
 ?>
