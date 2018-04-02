@@ -55,11 +55,18 @@
       font-size: 2rem!important;
       background: url(#{$pathIMG}/icons/burger.png) no-repeat 50% 50%;
       background-size: 35px;
+      height: 2rem!important;
+      width: 2rem!important;
       &::before{
         content: '';
       }
     }
   }
+  @include media('mobile'){
+    .logo_col{
+      max-width: 70%;
+    }
+  };
 }
 #offcanvas-wrapper{
   width: 100%!important;
