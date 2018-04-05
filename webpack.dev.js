@@ -49,7 +49,7 @@ module.exports = merge(common, {
         new BrowserSyncPlugin({
             // browse to http://localhost:3000/ during development, 
             host: 'localhost',
-            port: 8888,
+            port: 3000,
             server: {
                 baseDir: ['./']
             }

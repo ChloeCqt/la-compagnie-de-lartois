@@ -8,7 +8,7 @@
     "prod": "webpack --config webpack.prod.js",
     "start": "webpack --config webpack.dev.js --watch"
   },
-  "author": "Vincent Battez Julien Vanroy",
+  "author": "Vincent Battez",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
