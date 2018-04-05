@@ -46,4 +46,124 @@
       }
     }
   }
+  .bubble{
+    background-color: white!important;
+  }
+  .fa{
+    &.fa-bars{
+      color: $red;
+      font-size: 2rem!important;
+      background: url(#{$pathIMG}/icons/burger.png) no-repeat 50% 50%;
+      background-size: 35px;
+      height: 2rem!important;
+      width: 2rem!important;
+      &::before{
+        content: '';
+      }
+    }
+  }
+  @include media('mobile'){
+    .logo_col{
+      max-width: 70%;
+    }
+  };
+}
+#offcanvas-wrapper{
+  width: 100%!important;
+  background-color: white!important;
+  .offcanvas-top{
+    background: url(#{$pathIMG}/icons/close.png) no-repeat 95% 50%;
+    background-size: 35px;
+    cursor: pointer;
+    .logo-holder{
+      .logo-link{
+        &.dark{
+          display: none;
+        }
+      }
+      .custom-logo-link{
+        width: 75%;
+        img{
+          margin: auto auto auto 15px;
+        }
+      }
+    }
+  }
+  .offcanvas_menu{
+    .menu-item{
+      color: black;
+      border-bottom: 1px solid #df8f92;
+      &:first-of-type{
+        border-bottom: 1px solid #df8f92;
+      }
+      a{
+        background: url(#{$pathIMG}/icons/trait.png) no-repeat 1% 50%;
+        background-size: 6px;
+        font-size: 1rem;
+        i,span{
+          color: black;
+        }
+      }
+      &.open{
+        border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+        >a{
+          border-left: none;
+          color: $red;
+          i,span{
+            color: $red;
+          }
+          &:hover,&:focus{
+            border-left: none;
+            color: $red!important;
+            i,span{
+              color: $red;
+            }
+          }
+        }
+      }
+      &.current-menu-item{
+        color: $red!important;
+        >a{
+          color: $red!important;
+          i,span{
+            color: $red;
+          }
+        }
+      }
+      &:hover,&:focus{
+        color: $red!important;
+        >a{
+          color: $red!important;
+          i,span{
+            color: $red;
+          }
+        }
+      }
+      &:active{
+        color: $red!important;
+        >a{
+          color: $red!important;
+          i,span{
+            color: $red;
+          }
+        }
+      }
+      .sub-menu{
+        .menu-item{
+          border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+          &:first-of-type{
+            border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+          }
+          a{
+            background: #df8f92 url(#{$pathIMG}/icons/trait.png) no-repeat 1% 50%;
+            background-size: 6px;
+            color: white;
+            i,span{
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
 }

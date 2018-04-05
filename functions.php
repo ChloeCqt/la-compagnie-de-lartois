@@ -36,4 +36,5 @@ function gkp_insert_js_in_footer() {
     wp_enqueue_script('functions');
 
 }
+
 ?>
