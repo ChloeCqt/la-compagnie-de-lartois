@@ -35,16 +35,14 @@ function gkp_insert_js_in_footer() {
     wp_register_script('functions', get_stylesheet_directory_uri().'/dist/bundle.js','',false,true);
     wp_enqueue_script('functions');
 }
-add_filter( 'walker_nav_menu_start_el', 'wpstudio_add_description', 10, 2 );
-function wpstudio_add_description( $item_output, $item ) {
-    $description = $item->post_content;
-    if (' ' !== $description ) {
-        return preg_replace( '/(<a.*)</', '$1' . '<p class="menu-description">' . $description . '</p><', $item_output) ;
+function prefix_nav_description( $item_output, $item, $depth, $args ) {
+    if ( !empty( $item->description ) ) {
+        $item_output = str_replace( '</a>', '<p class="menu-description">' . $item->description . '</p></a>', $item_output );
     }
-    else {
-        return $item_output;
-    };
+ 
+    return $item_output;
 }
+add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 4 );
 register_nav_menus(
     array(
         'footer' => esc_html__( 'Menu Bas de Page'),

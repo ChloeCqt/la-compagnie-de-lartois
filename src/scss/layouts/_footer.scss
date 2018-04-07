@@ -6,7 +6,7 @@
       a{
         color: white;
       }
-      .menu-menu-du-bas-container{
+      .menu-menu-bas-de-page-container{
         padding: 0!important;
         .menu{
           display: flex;
@@ -86,7 +86,7 @@
         padding: 0 0 5px 0;
       }
       @include media('tablet'){
-        .menu-menu-du-bas-container{
+        .menu-menu-bas-de-page-container{
           .menu{
             flex-direction: column;
             .menu-item{
